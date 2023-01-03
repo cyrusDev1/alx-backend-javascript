@@ -1,12 +1,12 @@
 export default function updateUniqueItems(yourMap) {
+  if (Object.getPrototypeOf(yourMap) !== Map.prototype) {
+    throw new Error('Cannot process');
+  }
   for (const [key, value] of yourMap) {
     if (value === 1) {
-      try {
-        yourMap.set(key, 100);
-      } catch (error) {
-        throw new Error('Cannot process');
-      }
+      yourMap.set(key, 100);
     }
   }
+  console.log(typeof yourMap);
   return yourMap;
 }
