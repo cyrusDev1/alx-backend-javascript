@@ -1,12 +1,14 @@
 const fs = require('fs');
 const readline = require('readline');
 async function countStudents (path) {
+  fs.stat(path, (error, stats) => {
+    if (error) {
+      throw new Error('Cannot load the database');
+    }
+  });
   const stream = await fs.createReadStream(path);
   const p =
   new Promise((resolve, reject) => {
-    if (!stream) {
-      throw new Error('Cannot load the database');
-    }
     const rl = readline.createInterface({ input: stream });
     const data = [];
     rl.on('line', (row) => {
