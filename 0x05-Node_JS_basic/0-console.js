@@ -1,4 +1,4 @@
-function displayMessage(params) {
+function displayMessage (params) {
   console.log(params);
 }
 
