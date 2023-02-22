@@ -1,17 +1,17 @@
 /* eslint no-underscore-dangle: ["error", {"allow": ["_name", "_length", "_students"] }] */
 
 export default class HolbertonCourse {
-  constructor(name, length, students) {
+  constructor (name, length, students) {
     this.name = name;
     this.length = length;
     this.students = students;
   }
 
-  get name() {
+  get name () {
     return this._name;
   }
 
-  set name(Name) {
+  set name (Name) {
     if (typeof Name === 'string') {
       this._name = Name;
     } else {
@@ -19,11 +19,11 @@ export default class HolbertonCourse {
     }
   }
 
-  get length() {
+  get length () {
     return this._length;
   }
 
-  set length(Length) {
+  set length (Length) {
     if (typeof Length === 'number') {
       this._length = Length;
     } else {
@@ -31,11 +31,11 @@ export default class HolbertonCourse {
     }
   }
 
-  get students() {
+  get students () {
     return this._students;
   }
 
-  set students(Students) {
+  set students (Students) {
     if (typeof Students === 'object') {
       this._students = Students;
     } else {

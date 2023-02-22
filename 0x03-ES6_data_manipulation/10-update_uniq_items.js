@@ -1,4 +1,4 @@
-export default function updateUniqueItems(yourMap) {
+export default function updateUniqueItems (yourMap) {
   if (Object.getPrototypeOf(yourMap) !== Map.prototype) {
     throw new Error('Cannot process');
   }

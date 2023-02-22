@@ -9,5 +9,5 @@ const queryAPI = (endpoint) => {
   }
 };
 export {
-  weakMap, queryAPI,
+  weakMap, queryAPI
 };

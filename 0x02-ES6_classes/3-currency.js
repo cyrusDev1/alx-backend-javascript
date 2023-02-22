@@ -1,16 +1,16 @@
 /* eslint no-underscore-dangle: ["error", {"allow": ["_name", "_code"] }] */
 
 export default class Currency {
-  constructor(code, name) {
+  constructor (code, name) {
     this.code = code;
     this.name = name;
   }
 
-  get code() {
+  get code () {
     return this._code;
   }
 
-  set code(code) {
+  set code (code) {
     if (typeof code === 'string') {
       this._code = code;
     } else {
@@ -18,11 +18,11 @@ export default class Currency {
     }
   }
 
-  get name() {
+  get name () {
     return this._name;
   }
 
-  set name(name) {
+  set name (name) {
     if (typeof name === 'string') {
       this._name = name;
     } else {
@@ -30,7 +30,7 @@ export default class Currency {
     }
   }
 
-  displayFullCurrency() {
+  displayFullCurrency () {
     return `${this.name} (${this.code})`;
   }
 }
