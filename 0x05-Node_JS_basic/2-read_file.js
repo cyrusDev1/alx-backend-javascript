@@ -2,6 +2,9 @@ const fs = require('fs');
 const readline = require('readline');
 function countStudents (path) {
   const stream = fs.createReadStream(path);
+  if (!stream) {
+    throw new Error('Cannot load the database');
+  }
   const rl = readline.createInterface({ input: stream });
   const data = [];
   rl.on('line', (row) => {
