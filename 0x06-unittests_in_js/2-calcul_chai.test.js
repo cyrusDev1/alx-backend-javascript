@@ -1,6 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
-const calculateNumber = require('./1-calcul.js');
+const calculateNumber = require('./2-calcul_chai.js');
 describe('calculateNumber', function () {
   it('checks equality', function () {
     expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6);
